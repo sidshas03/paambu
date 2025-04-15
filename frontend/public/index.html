@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Prediction from Image</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> #filename rename pannidu
+</head>
+<body>
+  <div class="container">
+    <h1>Upload an Image to Predict Weather</h1>
+
+    <form id="uploadForm" enctype="multipart/form-data">
+      <input type="file" id="fileInput" name="file" accept="image/*" required>
+      <button type="submit">Predict</button>
+    </form>
+
+    <div id="result" class="result-area"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
